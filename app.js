@@ -3,12 +3,11 @@ const searchButton = document.querySelector(".search");
 const locationButton = document.querySelector(".locationBtn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
-  
-const API_KEY = "426c1dd5a373a98c5989f692b796992f";
+
+const API_KEY = "YOUR-API-KEY"; //I got mine from openweathermap
 
 const createWeatherCard = (cityName, weatherItem, index) => {
   if (index === 0) {
-    // <h2>${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h2>
     return `<div class="details">
                 <h2>${cityName}</h2>
                 <h6>Temperature: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h6>
