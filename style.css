@@ -1,0 +1,208 @@
+@import url('https://fonts.cdnfonts.com/css/kryshna');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'kryshna','Permenant Marker', cursive;
+  letter-spacing: 0.5px;
+}
+body {
+  background-color: #080808;
+}
+h1 {
+  background: #000000;
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 1rem 0;
+  color: #fbff00;
+  border-bottom: #a6ab11aa solid 0.5px;
+}
+
+.heading{
+  color: #fbff00;
+}
+.container {
+  gap: 2rem;
+  padding: 1.3rem;
+}
+.location {
+  display: flex;
+  width: 100%;
+}
+.location input {
+  height: 50px;
+  outline: none;
+  font-size: 1rem;
+  margin: 10px 0 20px 0;
+  border-radius: 2px;
+  border: none;
+  color:#838a05;
+  width: 70%;
+  padding: 10px;
+}
+.location input:focus {
+  border: 2px solid #161717;
+  outline: #e2ed0a solid 2px;;
+}
+.search, .locationBtn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  color: #000000b6;
+  transition: 0.2s ease;
+  justify-content: flex-end;
+}
+
+.locationBtn{
+  height: 50px;
+  font-size: o.9rem;
+  margin: 10px 0 20px 0;
+  padding: 10px;
+  width: 25%;
+}
+
+.search {
+  height: 50px;
+  width: 40px;
+  border: solid yellow 1px;
+  background: #000000;
+  color: yellow;
+  margin: 10px 1rem 20px 1rem;
+  padding: 10px;
+}
+
+.location .search:hover {
+  background: #161615;
+  color:#def066;
+}
+.location .search:active{
+  color: whitesmoke;
+}
+.location .locationBtn {
+  background: #def066;
+}
+.location .locationBtn:hover {
+  background: #0f0f0f;
+  color: #a6ab11aa;
+}
+.location .locationBtn:active {
+  background: #bfbcbc;
+}
+.weather-data {
+  width: 100%;
+  margin-top: 1rem;
+}
+.weather-data .current-weather {
+  color: #000000da;
+  background: #fbff00ef;
+  border-radius: 1px;
+  padding: 20px 70px 20px 20px;
+  display: flex;
+  text-align: center;
+}
+.current-weather{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.current-weather .details{
+  width: 100%;
+}
+.current-weather h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.weather-data h6 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.current-weather .icon{
+  text-align: center;
+}
+.current-weather .icon img {
+  max-width: 120px;
+  margin-top: -15px;
+}
+.current-weather .icon h6 {
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+.days-forecast h2 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+.days-forecast .weather-cards {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  color: #0f0e0e;
+  padding: 1rem;
+  list-style: none;
+  width: calc(100% / 5);
+  background:#def066;
+  border-radius: 3px;
+  margin: 5px;
+}
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.weather-cards .card img {
+  max-width: 70px;
+  margin: 5px 0 -12px 0;
+}
+
+@media( min-width: 1400px){
+  .current-weather{
+    margin-left: 24%;
+    width: 50%;
+    height: 15rem;
+    }
+    body{
+      overflow: hidden;
+    }
+}
+@media (max-width: 1400px) {
+  .weather-data .current-weather {
+    padding: 20px;
+  }
+  .weather-cards {
+    flex-wrap: wrap;
+  }
+  .weather-cards .card {
+    width: calc(100% / 4 - 15px);
+  }
+
+}
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: calc(100% / 3 - 15px);
+  }
+}
+@media (max-width: 950px) {
+  .location {
+    width: 100%;
+  }
+  .weather-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.45rem;
+    padding: 16px 0;
+  }
+  .container {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .location {
+    width: 100%;
+  }
+  .weather-data h2 {
+    font-size: 1.35rem;
+  }
+}
